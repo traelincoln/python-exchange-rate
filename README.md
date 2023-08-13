@@ -20,3 +20,10 @@ $ From            To              Amount          Cash
 - Get the correct ZWL rate from www.rbz.co.zw  
 - Allow for multiple input exchange rates and amounts  
 - Write tests
+
+# Data sources
+Credit: [fawazahmed0/currency-api on github](https://github.com/fawazahmed0/currency-api)
+
+# CDN links
+<https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json>
+<https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json>
