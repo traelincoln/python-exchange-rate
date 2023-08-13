@@ -22,8 +22,8 @@ $ From            To              Amount          Cash
 - Write tests
 
 # Data sources
-Credit: [fawazahmed0/currency-api on github](https://github.com/fawazahmed0/currency-api)
+Credit: [fawazahmed0/currency-api on Github](https://github.com/fawazahmed0/currency-api)
 
 ## CDN links
-<https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json>
-<https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json>
+- <https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json>  
+- <https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json>
