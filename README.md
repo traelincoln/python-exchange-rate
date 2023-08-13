@@ -24,6 +24,6 @@ $ From            To              Amount          Cash
 # Data sources
 Credit: [fawazahmed0/currency-api on github](https://github.com/fawazahmed0/currency-api)
 
-# CDN links
+## CDN links
 <https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json>
 <https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json>
