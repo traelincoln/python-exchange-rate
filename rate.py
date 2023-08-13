@@ -77,7 +77,9 @@ def main():
     cur_to = args.cur_to.lower()
     amount = args.amount
 
-    currencies = fx_all_currencies()
+    all_rates = fx_all_rates()
+    date = all_rates['date']
+    currencies = all_rates['usd']
 
     if currencies is None:
         print(
