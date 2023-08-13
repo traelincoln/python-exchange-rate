@@ -102,7 +102,7 @@ def main():
     else:
         print('From\t\tTo\t\tAmount\t\tCash')
         print(
-            f"{cur_from.upper()}\t1\t{cur_to.upper()}\t{currencies[cur_to]/currencies[cur_from]:.2f}\t{amount:,.2f}\t{currencies[cur_to] / currencies[cur_from] * amount:,.2f}"
+            f"{cur_from.upper()}\t1\t{cur_to.upper()}\t{currencies[cur_to]/currencies[cur_from]:,.2f}\t{amount:,.2f}\t{currencies[cur_to] / currencies[cur_from] * amount:,.2f}"
         )
 
     return 0
