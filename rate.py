@@ -50,23 +50,23 @@ def main():
 
     parser.add_argument(
         "cur_from",
-        metavar="CURRENCY FROM",
-        type=str,
-        help="Symbol of currency to convert from.",
-    )
-
-    parser.add_argument(
-        "cur_to",
-        metavar="CURRENCY TO",
+        metavar="CURRENCY-FROM",
         type=str,
         help="Symbol of currency to convert to.",
     )
 
     parser.add_argument(
+        "cur_to",
+        metavar="CURRENCY-TO",
+        type=str,
+        help="Symbol of currency to convert from.",
+    )
+
+    parser.add_argument(
         "amount",
-        metavar="EXCHANGE AMOUNT",
+        metavar="EXCHANGE-AMOUNT",
         nargs="?",
-        type=int,
+        type=float,
         default=1,
         help="Quantity of currency to convert. Defaults to 1",
     )
@@ -78,8 +78,8 @@ def main():
     amount = args.amount
 
     all_rates = fx_all_rates()
-    date = all_rates['date']
-    currencies = all_rates['usd']
+    date = all_rates["date"]
+    currencies = all_rates["usd"]
 
     if currencies is None:
         print(
@@ -92,12 +92,17 @@ def main():
         exit(1)
 
     elif cur_to not in currencies.keys():
-        print(f"Invalid currency symbol {cur_from}.")
+        print(f"Invalid currency symbol {cur_to}.")
         exit((1))
 
+    elif amount < 0:
+        print("Invalid exchange amount.")
+        amount = 1
+
     else:
+        print('From\t\tTo\t\tAmount\t\tCash')
         print(
-            f"{cur_from.upper()}\t{amount}\t{cur_to.upper()}\t{fx_conversion_rate(cur_from, cur_to)[cur_to] * amount:.2f}"
+            f"{cur_from.upper()}\t1\t{cur_to.upper()}\t{currencies[cur_to]/currencies[cur_from]:.2f}\t{amount:,.2f}\t{currencies[cur_to] / currencies[cur_from] * amount:,.2f}"
         )
 
     return 0
